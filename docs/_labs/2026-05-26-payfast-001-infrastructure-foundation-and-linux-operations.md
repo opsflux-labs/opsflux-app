@@ -39,8 +39,8 @@ Tasks include:
 
 ## Environment
 
-| Component | Details |
-|---|---|
+| Component     | Details |
+|---        |      ---|
 | Cloud Provider | GCP |
 | VM Name | payfast-devops-admin |
 | OS | Ubuntu 22.04 |
