@@ -1,44 +1,340 @@
-<section class="hero">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="hero-text">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpsFlux Learning Lab</title>
 
-        <h2>
-            Learning <span>DevOps, SRE & Cloud Engineering</span>
-            Through Real Infrastructure
-        </h2>
+    <style>
 
-        <p>
-            OpsFlux is my live engineering learning lab where I build,
-            break, troubleshoot, automate, and document real-world
-            cloud infrastructure using Linux, Kubernetes, Terraform,
-            Docker, CI/CD, monitoring, and Google Cloud Platform.
-        </p>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
 
-        <p>
-            Every day includes:
-            production-style tickets, debugging scenarios,
-            infrastructure automation, incident simulations,
-            and operational learning.
-        </p>
+        body{
+            background:#0f172a;
+            color:white;
+        }
 
-        <div class="hero-buttons">
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+        }
 
-            <a class="primary-btn"
-               href="https://github.com/opsflux-labs/opsflux-app">
-                View Learning Repository
-            </a>
+        header{
+            padding:25px 0;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
 
-            <a class="secondary-btn"
-               href="#">
-                Daily Labs
-            </a>
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+            color:#38bdf8;
+        }
+
+        nav a{
+            text-decoration:none;
+            color:#cbd5e1;
+            margin-left:25px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#38bdf8;
+        }
+
+        .hero{
+            min-height:85vh;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:50px;
+            flex-wrap:wrap;
+        }
+
+        .hero-text{
+            flex:1;
+            min-width:320px;
+        }
+
+        .hero-text h1{
+            font-size:58px;
+            line-height:1.2;
+            margin-bottom:25px;
+        }
+
+        .hero-text span{
+            color:#38bdf8;
+        }
+
+        .hero-text p{
+            color:#cbd5e1;
+            line-height:1.8;
+            margin-bottom:20px;
+            font-size:18px;
+        }
+
+        .buttons{
+            margin-top:35px;
+        }
+
+        .btn{
+            display:inline-block;
+            text-decoration:none;
+            padding:14px 28px;
+            border-radius:10px;
+            margin-right:15px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .primary{
+            background:#38bdf8;
+            color:#0f172a;
+        }
+
+        .primary:hover{
+            background:#0ea5e9;
+        }
+
+        .secondary{
+            border:1px solid #38bdf8;
+            color:#38bdf8;
+        }
+
+        .secondary:hover{
+            background:#38bdf8;
+            color:#0f172a;
+        }
+
+        .hero-image{
+            flex:1;
+            text-align:center;
+            min-width:320px;
+        }
+
+        .hero-image img{
+            width:100%;
+            max-width:450px;
+        }
+
+        .learning{
+            padding:80px 0;
+        }
+
+        .learning h2{
+            text-align:center;
+            margin-bottom:50px;
+            font-size:40px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:#1e293b;
+            padding:30px;
+            border-radius:16px;
+            border:1px solid #334155;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+            border-color:#38bdf8;
+        }
+
+        .card h3{
+            margin-bottom:15px;
+            color:#38bdf8;
+        }
+
+        .card p{
+            color:#cbd5e1;
+            line-height:1.7;
+        }
+
+        footer{
+            text-align:center;
+            padding:35px;
+            border-top:1px solid #1e293b;
+            color:#94a3b8;
+        }
+
+        @media(max-width:900px){
+
+            .hero{
+                flex-direction:column;
+                text-align:center;
+                padding-top:40px;
+            }
+
+            .hero-text h1{
+                font-size:42px;
+            }
+
+            nav{
+                display:none;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <div class="logo">
+            OpsFlux
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Learning</a>
+            <a href="#">Projects</a>
+            <a href="#">Labs</a>
+            <a href="#">GitHub</a>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Learning <span>DevOps, SRE & Cloud Engineering</span>
+                Through Real Infrastructure
+            </h1>
+
+            <p>
+                OpsFlux is my personal engineering learning lab
+                where I build, automate, troubleshoot,
+                and document real-world cloud infrastructure
+                using Linux, Kubernetes, Terraform,
+                Docker, CI/CD, monitoring, and Google Cloud Platform.
+            </p>
+
+            <p>
+                Daily learning includes:
+                production-style tickets,
+                debugging scenarios,
+                infrastructure automation,
+                incident simulations,
+                and operational engineering workflows.
+            </p>
+
+            <div class="buttons">
+
+                <a class="btn primary"
+                   href="https://github.com/opsflux-labs/opsflux-app">
+                    GitHub Repository
+                </a>
+
+                <a class="btn secondary"
+                   href="#">
+                    Daily Labs
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/8637/8637101.png">
+
+        </div>
+
+    </section>
+
+</div>
+
+<section class="learning">
+
+    <div class="container">
+
+        <h2>Current Learning Focus</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Linux & Networking</h3>
+                <p>
+                    Learning Linux internals,
+                    networking, services,
+                    troubleshooting, and operational workflows.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Kubernetes</h3>
+                <p>
+                    Building real-world Kubernetes environments,
+                    deployments, scaling, ingress, and observability.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Terraform</h3>
+                <p>
+                    Automating cloud infrastructure
+                    using Infrastructure as Code principles.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>CI/CD</h3>
+                <p>
+                    Learning GitHub Actions,
+                    deployment pipelines,
+                    and automation workflows.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Monitoring & SRE</h3>
+                <p>
+                    Exploring Prometheus,
+                    Grafana, logging,
+                    alerting, and incident response.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Cloud Engineering</h3>
+                <p>
+                    Building and operating
+                    infrastructure on Google Cloud Platform.
+                </p>
+            </div>
 
         </div>
 
     </div>
 
-    <div class="hero-image">
-        <img src="https://cdn-icons-png.flaticon.com/512/8637/8637101.png">
-    </div>
-
 </section>
+
+<footer>
+
+    OpsFlux Learning Lab • DevOps • SRE • Kubernetes • Cloud Engineering
+
+</footer>
+
+</body>
+
+</html>
