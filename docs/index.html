@@ -17,7 +17,6 @@ title: Home
       Build, automate, and troubleshoot with <strong>Linux, Kubernetes, Terraform, Docker,</strong> and <strong>GCP</strong> — not toy examples.
     </p>
     <div class="btn-group">
-      <a href="https://github.com/opsflux-labs" target="_blank" class="btn btn-primary">⎋ GitHub Repository</a>
       <a href="https://labs.opsflux.in" class="btn btn-secondary">→ Daily Labs</a>
     </div>
   </div>
@@ -55,34 +54,6 @@ title: Home
         <span class="stat-label">Real Infra</span>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Recent Labs -->
-<section class="section" style="padding-top:0">
-  <p class="section-label">// Recent Labs</p>
-  <h2 class="section-title">Latest Entries</h2>
-  <div class="labs-grid">
-    {% assign recent_labs = site.labs | sort: 'date' | reverse | limit: 3 %}
-    {% for lab in recent_labs %}
-    <a href="{{ lab.url | relative_url }}" class="lab-card">
-      <div class="lab-card-meta">
-        <span class="difficulty diff-{{ lab.difficulty }}">{{ lab.difficulty }}</span>
-        <span class="lab-card-date">{{ lab.date | date: "%b %d, %Y" }}</span>
-      </div>
-      <div class="lab-card-title">{{ lab.title }}</div>
-      <div class="lab-card-summary">{{ lab.summary }}</div>
-      <div class="lab-card-footer">
-        {% for tag in lab.tags limit:3 %}
-        <span class="tag">{{ tag }}</span>
-        {% endfor %}
-        <span class="lab-card-read">Read →</span>
-      </div>
-    </a>
-    {% endfor %}
-  </div>
-  <div style="margin-top:32px">
-    <a href="/labs/" class="btn btn-secondary">View All Labs →</a>
   </div>
 </section>
 
